@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3 sử dụng các hàm có sẵn</title>
+</head>
+<body>
+<label for="ip">Nhập đê: </label>
+<input id="ip">
+<button onclick="change()">Nhập đê</button>
+<p id="result"></p>
+    <script>
+        let ip =document.getElementById("ip");
+        let r = document.getElementById("result");
+
+        function change() {
+        for (let i = 0; i < ip.value.length; i++) {
+        if (ip.value[i] === ip.value[i].toLowerCase()) {
+        r.innerText += ip.value[i].toUpperCase();
+    }
+        else {
+        r.innerText += ip.value[i].toLowerCase();
+    }
+    }
+    }
+</script>
+</body>
+</html>

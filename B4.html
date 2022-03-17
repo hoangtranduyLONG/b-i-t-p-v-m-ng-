@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<label for="ip">Nhập từ cần tìm </label>
+<input id="ip">
+<button onclick="search()">Tìm kiếm</button>
+<p id="result"></p>
+</body>
+<script>
+    let dict = [["world","thế giới"], ["hard","chăm chỉ"], ["heart","trái tim"], ["eyes","mắt"]];
+    let ip = document.getElementById("ip");
+    let result = document.getElementById("result");
+
+    function search() {
+        for (let i = 0; i < dict.length; i++) {
+            if (dict[i][0] === ip.value) {
+                result.innerText = dict[i][1].toUpperCase();
+            }
+        }
+    }
+</script>
+</body>
+</html>
